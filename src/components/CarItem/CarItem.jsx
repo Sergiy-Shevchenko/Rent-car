@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 // import { useDispatch } from "react-redux";
 import css from './CarItem.module.css';
 import { ReactComponent as AddIcon } from '../picture/border.svg';
+import { Modal } from 'components/Modal/Modal';
+import { CarCard } from 'components/CarCard.jsx/CarCard';
 
 export const CarItem = (
   { id, make, model, img, year, rentalPrice, address, rentalCompany, type, accessories },
@@ -9,11 +11,17 @@ export const CarItem = (
 ) => {
   // const dispatch = useDispatch();
 
-  // const handleDelete = () => dispatch(deleteContact(id));
+  const [isOpenModal, setIsOpenModal] = useState(false);
+  
+  const handleOpenModal = () => {
+    setIsOpenModal(!isOpenModal);
+  };
+
+
 
   return (
-    <>
-      <li className={css.contactItem} key={key}>
+    <div>
+      <li className={css.cartItem} key={key}>
         <div className={css.card}>
           <img src={img} alt={id} className={css.card__img} />
           <div className={css.card_title}>
@@ -28,23 +36,29 @@ export const CarItem = (
           </div>
           <div className={css.car__location}>
             <p className={css.car__info}>{address}</p>
-            <AddIcon/>
+            <AddIcon className={css.icon }/>
             <p className={css.car__info}>{rentalCompany}</p>
           </div>
           <div className={css.car__option}>
-            <p className={css.car__info }>{type}</p>
+                  <p className={css.car__info }>{type}</p>
+            <AddIcon className={css.icon}/>
             <p className={css.car__info}>{model}</p>
+            <AddIcon className={css.icon}/>
             <p className={css.car__info}>{id}</p>
-            <p className={css.car__info}>{accessories[0]}</p>
+            <AddIcon className={css.icon}/>
+            <p className={css.car__info}>{accessories[1]}</p>
           </div>
           <button className={css.button}
             type="button"
-            //   onClick={handleDelete}
+              onClick={()=>handleOpenModal()}
           >
             Learn more
           </button>
         </div>
       </li>
-    </>
+      {isOpenModal && (<Modal openModal={handleOpenModal}>
+<CarCard closeModal={handleOpenModal}/>
+      </Modal>)}
+    </div>
   );
 };

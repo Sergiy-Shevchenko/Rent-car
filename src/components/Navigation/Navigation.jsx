@@ -1,29 +1,17 @@
 import { NavLink } from "react-router-dom";
 import logo from '../picture/logo.png'
+import css from "./Navigation.module.css"
 
 
 export const Navigation = () => {
-    // const isLoggedIn = useSelector(selectIsLoggedIn);
-    return (
-      <div 
-    //   className={css.navi}
-      >
-        <img 
-        // className={css.img} 
-        src={logo} alt="logo" />
-        <h2 
-        // className={css.title}
-        >Rent car</h2>
-        <nav 
-        // className={css.list}
-        >
-          <NavLink 
-        //   className={css.item} 
-          to="/">Home</NavLink>
-          <NavLink 
-            // className={css.item} 
-            to="phonebook">Catalog</NavLink>
-          
+       return (
+      <div className={css.container}> 
+        <img src={logo} alt="logo" className={css.img}/>
+        <h2 className={css.title}>Rent car</h2>
+        <nav className={css.navgation}>
+          <NavLink to="/" className={css.link}>Home</NavLink>
+          <NavLink to="catalog" className={css.link}>Catalog</NavLink>
+          <NavLink to="favorites" className={css.link}>Favorites</NavLink>          
         </nav>
       </div>
     );

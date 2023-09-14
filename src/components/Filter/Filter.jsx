@@ -7,6 +7,7 @@ import css from "./Filter.module.css"
 
 export const FilterCar = () => {
     const filter = useSelector(selectFilter);
+    console.log(filter)
     const dispatch = useDispatch();
   
     const handleFilterChange = ({ target: { value } }) => {
@@ -16,7 +17,9 @@ export const FilterCar = () => {
     return (
       <div className={css.container}>
         <div className={css.input__container}>
-        <p className={css.input__title} >Car brand</p>       
+        <p className={css.input__title} >Car brand</p>
+        {/* <select value={filter}>
+        </select>        */}
         <input className={css.input}
         type="text"
         value={filter}
@@ -32,14 +35,14 @@ export const FilterCar = () => {
         <p className={css.input__title}>Price/ 1 hour</p>       
         <input
         // className={css.input}
-        type="text"
+        type="numer"
         value={filter}
         onChange={handleFilterChange}
         name="filter"
-        pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
+        // pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
         title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
         required
-        placeholder="To $"
+        placeholder="To"
       /> 
       </div>
       <div>
@@ -50,8 +53,6 @@ export const FilterCar = () => {
         value={filter}
         onChange={handleFilterChange}
         name="filter"
-        pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
-        title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
         required
         placeholder="From"
       /> 
@@ -61,8 +62,6 @@ export const FilterCar = () => {
         value={filter}
         onChange={handleFilterChange}
         name="filter"
-        pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
-        title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
         required
         placeholder="To"
       /> 

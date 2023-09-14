@@ -1,4 +1,17 @@
+import { React } from 'react';
 
+import { CarList } from 'components/CarList/CarList';
+import { FilterCar } from 'components/Filter/Filter';
+
+
+const styles = {
+  container: {
+    width: 1400,
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginLeft: 'auto',
+    marginRight: 'auto',
+  }}
 
 
 export const CarCatalog = () => {
@@ -9,17 +22,9 @@ export const CarCatalog = () => {
     // }, [dispatch]);
   
     return (
-      <div 
-    //   style={styles.container}
-      >
-        <h2 
-        // style={styles.title}
-        >Phonebook</h2>
-        {/* <ContactsForm /> */}
-        {/* <h2 style={styles.title}>Contacts</h2>
-        <h3 style={styles.title_contacts}>Find contacts by name</h3> */}
-        {/* <Filter />
-        <ContactsList /> */}
+      <div style={styles.container}>
+        <FilterCar/>
+        <CarList/>      
       </div>
     );
   };

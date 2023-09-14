@@ -1,5 +1,7 @@
-.contactItem {
+.cartItem {
     width: 274px;
+    text-decoration: none;
+    list-style-type: none;
 }
 
 .card {
@@ -83,4 +85,9 @@ border-radius: 12px;
 color: #fff;
 background: #3470FF;
 border: none;
+}
+
+.icon {
+    margin-left: 6px;
+    margin-right: 6px;
 }

@@ -6,6 +6,8 @@ import { fethcCars } from "redux/operations";
 import { selectIsLoading, selectError, visibleCars } from 'redux/selector';
 import css from "./Carlist.module.css"
 
+
+
 // import { FilterCar } from "components/Filter/Filter";
 
 
@@ -15,8 +17,7 @@ import css from "./Carlist.module.css"
 export const CarList = () => {
     const dispatch = useDispatch()
     
-
-
+    
     // const cars = useSelector(selectCars);
     // console.log(cars)
     const filterCars = useSelector(visibleCars);
@@ -41,6 +42,8 @@ export const CarList = () => {
           {filterCars.map(({id, make, model, 
           img, year, rentalPrice, address, rentalCompany, type, accessories
         }) => ( 
+
+
             <CarItem 
             id={id} 
             make={make} 
@@ -57,6 +60,7 @@ export const CarList = () => {
           )) 
           }  
         </ul>
+     
       </div>
     );
   };
