@@ -1,0 +1,172 @@
+.img {
+  width: 460px;
+  height: 320px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 14px;
+}
+
+.card_title {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card__car__info {
+  display: flex;
+}
+
+p {
+  margin: 0;
+}
+
+.car__make,
+.car__year,
+.car__price {
+  font-family: Manrope;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  margin-top: 14px;
+  margin-bottom: 8px;
+  color: #121417;
+}
+
+.car__model {
+  font-family: Manrope;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  padding-left: 3px;
+  line-height: 24px;
+  margin-top: 14px;
+  margin-bottom: 8px;
+  color: #3470ff;
+}
+
+.car__year {
+  padding-left: 3px;
+}
+
+.car__location,
+.car__option {
+  display: flex;
+}
+
+.car__info {
+  font-family: Manrope;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+  color: rgba(18, 20, 23, 0.5);
+  /* border-right: 2px solid #121417; */
+}
+
+.button {
+  width: 100%;
+  height: 44px;
+  padding: 12px 99px;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: 12px;
+  color: #fff;
+  background: #3470ff;
+  border: none;
+}
+
+.icon {
+  width: 3px;
+  height: 10px;
+  margin-left: 6px;
+  margin-right: 6px;
+  margin-top: 3px;
+}
+
+.car__description {
+  color: #121417;
+  font-family: Manrope;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  margin-top: 14px;
+  margin-bottom: 24px;
+}
+
+.car__functional__title {
+color: #121417;
+font-family: Manrope;
+font-size: 14px;
+font-style: normal;
+font-weight: 500;
+line-height: 20px;
+margin-bottom: 8px; 
+}
+
+.car__func {
+    display: flex;
+}
+
+.car__rent_title {
+    color: #121417;
+font-family: Manrope;
+font-size: 14px;
+font-style: normal;
+font-weight: 500;
+line-height: 20px;
+margin-top: 24px;
+margin-bottom: 15px;
+}
+
+.car__rent_condition {
+    display: block;
+    color: #363535;
+    font-family: Manrope;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px; 
+    margin-bottom: 24px;
+}
+
+.car__odometr__price {
+    display: flex;
+}
+
+.car__odometr,
+.car__price {
+    color: #3470FF;
+    font-family: Montserrat;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 18px;
+    letter-spacing: -0.24px; 
+    margin-top: 0;
+    margin-left: 5px; 
+}
+
+.car__odometr {
+    margin-right: 20px;
+}
+
+.button__modal {
+    width: 168px;
+    display: inline-flex;
+padding: 12px 50px;
+justify-content: center;
+align-items: center;
+border-radius: 12px;
+background: #3470FF;
+color: #FFF;
+/* font-family: Manrope; */
+font-size: 14px;
+font-style: normal;
+/* font-weight: 600; */
+line-height: 20px;
+border: none;
+text-decoration: none !important;
+}

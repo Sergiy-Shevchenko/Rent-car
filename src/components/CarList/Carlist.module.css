@@ -2,6 +2,8 @@
    width: 1400px;
    margin-left: auto;
    margin-right: auto;
+   justify-content: center;
+   
 }
 
 .carList {
@@ -9,4 +11,20 @@
     flex-wrap: wrap;
     gap: 29px;
     padding: 0;
+    justify-content: center;
+}
+
+.button {
+    color: #3470FF;
+font-family: Manrope;
+font-size: 16px;
+font-style: normal;
+font-weight: 500;
+line-height: 24px; /* 150% */
+text-decoration: none;
+margin-top: 50px;
+border: none;
+background: #fff;
+margin-left: auto;
+margin-right: auto;
 }

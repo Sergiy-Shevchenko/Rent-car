@@ -8,9 +8,29 @@
     width: 100%;
 }
 
+.button__favorite {
+    position:absolute;
+margin-top: 10px;
+margin-left: 230px;
+width: 24px;
+height: 24px;
+padding: 0;
+opacity: 2;
+background-color: #ffffff04;
+border: none;
+}
+
+
+.favorite__icon {
+    stroke: white;
+}
+/* .checkbox::before {
+content: '';
+} */
+
 .card__img {
     width: 100%;
-    height: 220px;
+    height: 200px;
     border-radius: 15px;
 }
 
@@ -62,6 +82,10 @@ margin-bottom: 8px;
     display: flex;
 }
 
+.car__option {
+    height: 18px;
+}
+
 .car__info {
     font-family: Manrope;
     font-size: 12px;
@@ -73,7 +97,7 @@ margin-bottom: 8px;
 }
 
 
-.button {
+.button__open_modal {
 
 width: 100%;
 height: 44px;
@@ -85,9 +109,13 @@ border-radius: 12px;
 color: #fff;
 background: #3470FF;
 border: none;
+margin-top: 28px;
 }
 
 .icon {
-    margin-left: 6px;
-    margin-right: 6px;
+    width: 3px;
+    height: 10px;
+            margin-left: 6px;
+            margin-right: 6px;
+            margin-top: 3px;
 }

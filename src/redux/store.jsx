@@ -1,5 +1,4 @@
 import { configureStore } from '@reduxjs/toolkit';
-
 import { carsReduser } from './carsSlice';
 import { filterReducer } from './filterSlice';
 

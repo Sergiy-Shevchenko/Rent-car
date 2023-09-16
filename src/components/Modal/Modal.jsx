@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import style from './Modal.module.css';
-import close from '../picture/x.svg';
+import sprite from "../picture/sprite-icon.svg"
+
 import { createPortal } from 'react-dom';
 
 
@@ -42,7 +43,7 @@ export const Modal = ({ children, openModal }) => {
           onClick={() => openModal()}
         >
           <svg className={style.icon}>
-            <use href={close} />
+            <use href={sprite + "#close"} />
           </svg>
         </button>
         {children}

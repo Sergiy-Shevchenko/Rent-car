@@ -15,3 +15,34 @@ const filterSlice = createSlice({
 });
 export const { filterCars } = filterSlice.actions;
 export const filterReducer = filterSlice.reducer;
+
+//-------------------------------------------------------
+
+
+
+// const initialState = {
+//     status: statusFilters.all,
+//   };
+
+
+// const statusFilters = Object.freeze({
+//     all: "all",
+//     active: "active",
+//     completed: "completed",
+//   });
+
+//   const filtersSlice = createSlice({
+//     name: "filter",
+//     initialState: filtersInitialState,
+//     reducers: {
+//       setStatusFilter(state, action) {
+//         state.status = action.payload;
+//       },
+//     },
+//   });
+  
+//   export const { setStatusFilter } = filtersSlice.actions;
+//   export const filtersReducer = filtersSlice.reducer;
+  
+
+
