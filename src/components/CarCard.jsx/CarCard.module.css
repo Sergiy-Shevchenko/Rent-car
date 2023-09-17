@@ -61,7 +61,6 @@ p {
   font-weight: 400;
   line-height: 18px;
   color: rgba(18, 20, 23, 0.5);
-  /* border-right: 2px solid #121417; */
 }
 
 .button {
@@ -97,76 +96,74 @@ p {
 }
 
 .car__functional__title {
-color: #121417;
-font-family: Manrope;
-font-size: 14px;
-font-style: normal;
-font-weight: 500;
-line-height: 20px;
-margin-bottom: 8px; 
+  color: #121417;
+  font-family: Manrope;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+  margin-bottom: 8px;
 }
 
 .car__func {
-    display: flex;
+  display: flex;
 }
 
 .car__rent_title {
-    color: #121417;
-font-family: Manrope;
-font-size: 14px;
-font-style: normal;
-font-weight: 500;
-line-height: 20px;
-margin-top: 24px;
-margin-bottom: 15px;
+  color: #121417;
+  font-family: Manrope;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+  margin-top: 24px;
+  margin-bottom: 15px;
 }
 
 .car__rent_condition {
-    display: block;
-    color: #363535;
-    font-family: Manrope;
-    font-size: 12px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 18px; 
-    margin-bottom: 24px;
+  display: block;
+  color: #363535;
+  font-family: Manrope;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+  margin-bottom: 24px;
 }
 
 .car__odometr__price {
-    display: flex;
+  display: flex;
 }
 
 .car__odometr,
 .car__price {
-    color: #3470FF;
-    font-family: Montserrat;
-    font-size: 12px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 18px;
-    letter-spacing: -0.24px; 
-    margin-top: 0;
-    margin-left: 5px; 
+  color: #3470ff;
+  font-family: Montserrat;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 18px;
+  letter-spacing: -0.24px;
+  margin-top: 0;
+  margin-left: 5px;
 }
 
 .car__odometr {
-    margin-right: 20px;
+  margin-right: 20px;
 }
 
 .button__modal {
-    width: 168px;
-    display: inline-flex;
-padding: 12px 50px;
-justify-content: center;
-align-items: center;
-border-radius: 12px;
-background: #3470FF;
-color: #FFF;
-/* font-family: Manrope; */
-font-size: 14px;
-font-style: normal;
-/* font-weight: 600; */
-line-height: 20px;
-border: none;
-text-decoration: none !important;
+  width: 168px;
+  display: inline-flex;
+  padding: 12px 50px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+  background: #3470ff;
+  color: #fff;
+  font-size: 14px;
+  font-style: normal;
+  line-height: 20px;
+  border: none;
+  text-decoration: none !important;
 }

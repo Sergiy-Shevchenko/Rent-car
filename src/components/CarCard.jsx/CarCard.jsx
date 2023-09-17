@@ -19,12 +19,9 @@ export const CarCard = ({
   rentalConditions,
   mileage,
 }) => {
-  
-  
-    const location = address.split(',');
-    const driver = rentalConditions.split(' ')
-    console.log(driver)
-
+  const location = address.split(',');
+  const driver = rentalConditions.split(' ');
+  console.log(driver);
 
   return (
     <div>

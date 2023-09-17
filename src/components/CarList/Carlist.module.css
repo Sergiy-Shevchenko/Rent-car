@@ -13,12 +13,10 @@
   justify-content: center;
 }
 
-
 .cartItem {
-    width: 274px;
-    /* display: flex; */
-    text-decoration: none;
-    list-style-type: none;
+  width: 274px;
+  text-decoration: none;
+  list-style-type: none;
 }
 
 .button {
