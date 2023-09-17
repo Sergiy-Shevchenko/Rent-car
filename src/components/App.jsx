@@ -6,12 +6,7 @@ import { CarFavorite } from "pages/CarFavoritePage";
 
 
 export const App = () => {
-  // const dispatch = useDispatch();
-  // const isRegresing = useSelector(selectIsRefreshing);
-
-  // useEffect(() => {
-  //   dispatch(refreshUser());
-  // }, [dispatch]);
+ 
 
   return  (
    

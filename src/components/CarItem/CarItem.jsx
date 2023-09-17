@@ -1,13 +1,12 @@
 import React, { useState } from 'react';
-// import { useDispatch } from "react-redux";
 import sprite from '../picture/sprite-icon.svg';
 import css from './CarItem.module.css';
 import { Modal } from 'components/Modal/Modal';
 import { CarCard } from 'components/CarCard.jsx/CarCard';
 
+
 export const CarItem = (
-  {
-    id,
+  { id,
     make,
     model,
     img,
@@ -24,42 +23,26 @@ export const CarItem = (
     rentalConditions,
     mileage
   },
-  key
+ key
 ) => {
-  // const dispatch = useDispatch();
-
+  
   const [isOpenModal, setIsOpenModal] = useState(false);
-    
+
+
+//-------------------------------------------------------------
+
+
   const handleOpenModal = () => {
     setIsOpenModal(!isOpenModal);
   };
-
-
-
-
-//   const  Message = (accessories) => {
-//     const maxLength = 10;
-//     // let result;
-//     // Change code below this line
-//   if (accessories.length <= maxLength)   {
-//       return accessories;
-//     }   else { 
-//       return accessories.slice(0, maxLength) + "...";
-//     }
-//     /// Change code above this line
-//     // return result;
-//   }
-
-
-
-
+  const location = address.split(',')
 
 
   return (
     <div>
-      <li className={css.cartItem} key={key}>
-        {/* <input type={'checkbox'} className={css.checkbox}/> */}
-        <button type="button" className={css.button__favorite}>
+       <li className={css.cartItem} key={key}>
+        <button type="button" 
+        className={css.button__favorite}>
         <svg className={css.favorite__icon}>
               <use href={sprite + '#normal'} />
             </svg>
@@ -77,11 +60,11 @@ export const CarItem = (
             </span>
           </div>
           <div className={css.car__location}>
-            <p className={css.car__info}>{address[1]}</p>
+            <p className={css.car__info}>{location[2]}</p>
             <svg className={css.icon}>
               <use href={sprite + '#border'} />
             </svg>
-            <p className={css.car__info}>{address[0]}</p>
+            <p className={css.car__info}>{location[1]}</p>
             <svg className={css.icon}>
               <use href={sprite + '#border'} />
             </svg>
@@ -110,7 +93,7 @@ export const CarItem = (
             Learn more
           </button>
         </div>
-      </li>
+   </li>
       {isOpenModal && (
         <Modal openModal={handleOpenModal}>
           <CarCard

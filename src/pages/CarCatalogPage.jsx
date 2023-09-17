@@ -1,8 +1,5 @@
 import { React } from 'react';
-
 import { CarList } from 'components/CarList/CarList';
-import { FilterCar } from 'components/Filter/Filter';
-
 
 const styles = {
   container: {
@@ -11,20 +8,13 @@ const styles = {
     justifyContent: 'center',
     marginLeft: 'auto',
     marginRight: 'auto',
-  }}
-
+  },
+};
 
 export const CarCatalog = () => {
-    // const dispatch = useDispatch();
-  
-    // useEffect(() => {
-    //   dispatch(fethcContacts());
-    // }, [dispatch]);
-  
-    return (
-      <div style={styles.container}>
-        <FilterCar/>
-        <CarList/>      
-      </div>
-    );
-  };
+  return (
+    <div style={styles.container}>
+      <CarList />
+    </div>
+  );
+};

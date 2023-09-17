@@ -10,8 +10,9 @@ export const visibleCars = createSelector(
   (cars, filter) => {
     const nopmalizedFilter = filter.toLowerCase();
 
-    return cars.filter(({ make}) =>
-      make.toLowerCase().includes(nopmalizedFilter)
+    return cars.filter(({ make, rentalPrice}) =>
+      make.includes(nopmalizedFilter)
+    //   rentalPrice.toLowerCase().includes(nopmalizedFilter)
     );
   }
 );
