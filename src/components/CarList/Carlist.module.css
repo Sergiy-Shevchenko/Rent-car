@@ -13,6 +13,14 @@
   justify-content: center;
 }
 
+
+.cartItem {
+    width: 274px;
+    /* display: flex; */
+    text-decoration: none;
+    list-style-type: none;
+}
+
 .button {
   color: #3470ff;
   display: block;

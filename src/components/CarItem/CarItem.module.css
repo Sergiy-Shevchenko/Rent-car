@@ -9,7 +9,7 @@
 }
 
 .button__favorite {
-    position:absolute;
+position:absolute;
 margin-top: 10px;
 margin-left: 230px;
 width: 24px;
@@ -24,9 +24,7 @@ border: none;
 .favorite__icon {
     stroke: white;
 }
-/* .checkbox::before {
-content: '';
-} */
+
 
 .card__img {
     width: 100%;

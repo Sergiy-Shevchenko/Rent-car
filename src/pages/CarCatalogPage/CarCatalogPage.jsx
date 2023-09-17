@@ -11,10 +11,12 @@ const styles = {
   },
 };
 
-export const CarCatalog = () => {
+const CarCatalog = () => {
   return (
     <div style={styles.container}>
       <CarList />
     </div>
   );
 };
+
+export default CarCatalog
