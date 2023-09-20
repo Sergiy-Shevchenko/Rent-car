@@ -20,8 +20,13 @@ export const CarCard = ({
   mileage,
 }) => {
   const location = address.split(',');
-  const driver = rentalConditions.split(' ');
-  console.log(driver);
+
+  const miles = mileage.toLocaleString('en-US');
+  const age = rentalConditions.split('\n');
+  const driver = age[1];
+  const proof = age[2];
+  const eyarOld = age[0].split(' ');
+
 
   return (
     <div className={css.container}>
@@ -51,8 +56,9 @@ export const CarCard = ({
           <use href={sprite + '#border'} />
         </svg>
         <p className={css.car__info}>Type: {type}</p>
-      </div>
-      <div className={css.car__option}>
+        <svg className={css.icon}>
+          <use href={sprite + '#border'} />
+        </svg>
         <p className={css.car__info}>Fuel Consumption: {fuelConsumption}</p>
         <svg className={css.icon}>
           <use href={sprite + '#border'} />
@@ -74,8 +80,8 @@ export const CarCard = ({
             <use href={sprite + '#border'} />
           </svg>
           <p className={css.car__info}>{accessories[2]}</p>
-        </div>
-        <div className={css.car__func}>
+          {/* </div>
+        <div className={css.car__func}> */}
           <p className={css.car__info}>{functionalities[0]}</p>
           <svg className={css.icon}>
             <use href={sprite + '#border'} />
@@ -88,10 +94,17 @@ export const CarCard = ({
         </div>
         <div>
           <p className={css.car__rent_title}>Rental Conditions:</p>
-          <p className={css.car__rent_condition}>{rentalConditions}</p>
+          <div className={css.car__condition}>
+            <span className={css.driver_age}>
+              <p className={css.car__rent_condition}>Minimum age:</p>
+              <p className={css.car__rent_condition_age}>{eyarOld[2]}</p>
+            </span>
+            <p className={css.car__rent_condition}>{driver}</p>
+            <p className={css.car__rent_condition}>{proof}</p>
+          </div>
           <div className={css.car__odometr__price}>
             <p className={css.car__rent_condition}>Mileage:</p>
-            <p className={css.car__odometr}>{mileage}</p>
+            <p className={css.car__odometr}>{miles}</p>
             <p className={css.car__rent_condition}>Price: </p>
             <p className={css.car__price}>{rentalPrice}</p>
           </div>

@@ -3,7 +3,7 @@
 
 .img {
   width: 100%;
-  height: 320px;
+  /* height: 320px; */
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -52,12 +52,14 @@ p {
   padding-left: 3px;
 }
 
-.car__location,
-.car__option {
+.car__location {
+  flex-wrap: wrap;
   display: flex;
 }
 
 .car__info {
+
+  display: block;
   font-family: Manrope;
   font-size: 12px;
   font-style: normal;
@@ -68,6 +70,7 @@ p {
 
 .button {
   width: 100%;
+  font-family: Manrope;
   height: 44px;
   padding: 12px 99px;
   justify-content: center;
@@ -81,10 +84,12 @@ p {
 
 .icon {
   width: 3px;
-  height: 10px;
+  height: 12px;
   margin-left: 6px;
   margin-right: 6px;
   margin-top: 3px;
+  stroke: #0c0c0c;
+  fill:#0c0c0c;
 }
 
 .car__description {
@@ -95,7 +100,7 @@ p {
   font-weight: 400;
   line-height: 20px;
   margin-top: 14px;
-  margin-bottom: 24px;
+  margin-bottom: 18px;
 }
 
 .car__functional__title {
@@ -109,6 +114,7 @@ p {
 }
 
 .car__func {
+  flex-wrap: wrap;
   display: flex;
 }
 
@@ -119,8 +125,8 @@ p {
   font-style: normal;
   font-weight: 500;
   line-height: 20px;
-  margin-top: 24px;
-  margin-bottom: 15px;
+  margin-top: 18px;
+  margin-bottom: 14px;
 }
 
 .car__rent_condition {
@@ -131,7 +137,19 @@ p {
   font-style: normal;
   font-weight: 400;
   line-height: 18px;
-  margin-bottom: 24px;
+  margin-bottom: 10px;
+}
+
+.car__rent_condition_age {
+  color: #3470ff;
+  font-family: Montserrat;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 18px;
+  letter-spacing: -0.24px;
+  margin-top: 0;
+  margin-left: 5px;
 }
 
 .car__odometr__price {
@@ -160,6 +178,8 @@ p {
   display: inline-flex;
   padding: 12px 50px;
   justify-content: center;
+  font-family: Manrope;
+  font-weight: 500;
   align-items: center;
   border-radius: 12px;
   background: #3470ff;
@@ -168,5 +188,15 @@ p {
   font-style: normal;
   line-height: 20px;
   border: none;
+  margin-top: 20px;
   text-decoration: none !important;
+}
+
+.car__condition {
+  display: flex;
+  justify-content: space-between;
+}
+
+.driver_age {
+  display: flex;
 }
