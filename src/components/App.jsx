@@ -1,4 +1,4 @@
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, Navigate } from 'react-router-dom';
 import { Layout } from './Layout';
 import { HomePage } from 'pages/HomePage';
 import { lazy, useEffect, useRef, useState } from 'react';
@@ -54,6 +54,7 @@ export const App = () => {
               />
             }
           />
+           <Route path="*" element={<Navigate to="/" />} />
         </Route>
       </Routes>
     </div>

@@ -24,7 +24,7 @@ export const CarCard = ({
   console.log(driver);
 
   return (
-    <div>
+    <div className={css.container}>
       <img src={img} alt={make} className={css.img} />
       <div className={css.card_title}>
         <span className={css.card__car__info}>

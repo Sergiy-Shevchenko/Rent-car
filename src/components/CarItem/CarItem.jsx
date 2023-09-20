@@ -51,6 +51,7 @@ export const CarItem = ({
     setIsLoading(true);
 
     const { data } = await getAdvertById(id);
+    console.log(data)
 
     const newAdvert = {
       ...data,
