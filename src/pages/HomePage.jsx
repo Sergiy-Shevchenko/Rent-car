@@ -37,6 +37,4 @@ export const HomePage = () => {
   };
   
   
-  //   
-  // style={styles.img}
-    // style={styles.title}
+ 

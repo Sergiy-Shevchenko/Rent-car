@@ -10,7 +10,7 @@ import './index.css';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
 
-  <BrowserRouter basename="/rent-car">
+  <BrowserRouter basename="/Rent-car">
     <App />
   </BrowserRouter>
 );
