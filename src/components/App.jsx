@@ -9,9 +9,10 @@ const CarFavorite = lazy(() => import('../pages/CarFavoritPage/index'));
 export const App = () => {
   const [favorites, setFavorites] = useState([]);
   const favRef = useRef(favorites);
-
+  
   useEffect(() => {
     const result = JSON.parse(localStorage.getItem('favorites'));
+    console.log(result)
     if (result) setFavorites(result);
   }, []);
 
@@ -22,12 +23,22 @@ export const App = () => {
   }, [favorites]);
 
   const addFavorites = newFavorit => {
-    setFavorites(prevFaf => [...prevFaf, newFavorit]);
+    let arrayIsFavorite = false;
+
+    favorites.forEach(el => {
+      if (el.id === newFavorit.id) {
+        arrayIsFavorite = true;
+        alert('This car has been added to the favorites collection');
+      }
+    });
+    if (!arrayIsFavorite) {
+      setFavorites(prev => [...prev, newFavorit]);
+    }  
   };
 
   const dellFavorit = favoritId => {
     setFavorites(favorites.filter(({ id }) => id !== favoritId));
-    return;
+      return;
   };
 
   return (
@@ -38,10 +49,9 @@ export const App = () => {
           <Route
             path="catalog"
             element={
-              <CarCatalog
-                addFavorites={addFavorites}
-                dellFavorit={dellFavorit}
-              />
+              <CarCatalog 
+              addFavorit={addFavorites} 
+              dellFavorit={dellFavorit} />
             }
           />
           <Route
@@ -54,7 +64,7 @@ export const App = () => {
               />
             }
           />
-           <Route path="*" element={<Navigate to="/" />} />
+          <Route path="*" element={<Navigate to="/" />} />
         </Route>
       </Routes>
     </div>

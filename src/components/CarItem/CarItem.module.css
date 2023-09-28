@@ -20,8 +20,12 @@
   border: none;
 }
 
-.favorite__icon {
+.icon_normal {
   stroke: white;
+  cursor: pointer;
+}
+
+.icon_active {
   cursor: pointer;
 }
 

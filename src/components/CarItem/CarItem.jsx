@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import sprite from '../picture/sprite-icon.svg';
 import defaultImage from '../picture/default.png';
 import css from './CarItem.module.css';
 import { Modal } from 'components/Modal/Modal';
 import { CarCard } from 'components/CarCard.jsx/CarCard';
 
-import { getAdvertById, updateAdvert } from '../Api/Api';
+// import { getAdvertById, updateAdvert } from '../Api/Api';
 
 export const CarItem = ({
   data,
@@ -14,8 +14,9 @@ export const CarItem = ({
   collection,
   setCollection,
 }) => {
-  const [isLoading, setIsLoading] = useState(false);
+console.log(collection)
   const [isOpenModal, setIsOpenModal] = useState(false);
+  // const [isFavorites, setIsFavorites] = useState(false);
   const location = data.address.split(',');
   const {
     id,
@@ -46,31 +47,21 @@ export const CarItem = ({
     });
     return result;
   };
-  console.log(data);
-  const handlerSetFavorites = async id => {
-    setIsLoading(true);
 
-    const { data } = await getAdvertById(id);
-    console.log(data)
-
+  const handlerSetFavorites = data => {
     const newAdvert = {
       ...data,
       isFavorites: !data.isFavorites,
     };
 
-    updateAdvert(id, newAdvert)
-      .then(({ data }) => {
-        setCollection(updateCard(collection, data.id, data));
-        if (data.isFavorites) {
-          addFavorit(data);
-          return;
-        } else {
-          dellFavorit(data.id);
-          return;
-        }
-      })
-      .catch(error => console.log(error.message))
-      .finally(() => setIsLoading(false));
+    addFavorit(newAdvert);
+    setCollection(updateCard(collection, data.id, (data = newAdvert)));
+    return;
+  };
+
+  const dellSetFavorites = () => {
+    dellFavorit(data.id);
+    data.isFavorites = false;
   };
 
   const handleOpenModal = () => {
@@ -79,17 +70,28 @@ export const CarItem = ({
 
   return (
     <div className={css.cartItem}>
-      <button
-        type="button"
-        className={css.button__favorite}
-        onClick={() => handlerSetFavorites(id)}
-        isFavorites={isFavorites}
-        isDisabled={isLoading}
-      >
-        <svg className={css.favorite__icon}>
-          <use href={sprite + '#normal'} />
-        </svg>
-      </button>
+      {!isFavorites ? (
+        <button
+          type="button"
+          className={css.button__favorite}
+          onClick={() => handlerSetFavorites(data)}
+        >
+          <svg className={css.icon_normal}>
+            <use href={sprite + '#normal'} />
+          </svg>
+        </button>
+      ) : (
+        <button
+          type="button"
+          className={css.button__favorite}
+          onClick={dellSetFavorites}
+        >
+          <svg className={css.icon_active}>
+            <use href={sprite + '#active'} />
+          </svg>
+        </button>
+      )}
+
       <div className={css.card}>
         <img
           src={img ? img : defaultImage}

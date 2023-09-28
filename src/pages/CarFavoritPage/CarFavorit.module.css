@@ -1,0 +1,24 @@
+
+
+
+.carList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 29px;
+    padding: 0;
+    justify-content: center;
+  }
+
+
+  .section__title {
+    margin-top: 250px;
+}
+
+
+.title {
+    color: #3470ff;
+    font-family: Manrope;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 500;
+}

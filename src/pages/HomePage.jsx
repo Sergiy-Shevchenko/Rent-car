@@ -14,11 +14,12 @@ const styles = {
       marginRight: 'auto',
     },
     title: {
-      fontWisght: 500,
+      fontFamily: 'Manrope',
+      fontWeight: 700,
       fontSize: 48,
       textAlign: 'center',
       marginRight: 30,
-      color: 'rgb(23, 23, 203',
+      color: ' #3470ff',
     },
     img: {
       display: 'block',
